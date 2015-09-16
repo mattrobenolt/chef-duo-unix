@@ -7,9 +7,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -57,14 +57,14 @@ end
 ssh_config "ForceCommand" do
   string "ForceCommand /usr/sbin/login_duo"
   action :add
-  only_if { node['duo_unix']['conf']['login_duo_enabled'] == true } 
+  only_if { node['duo_unix']['conf']['login_duo_enabled'] == true }
 end
 
 #disable login_duo for ssh
 ssh_config "ForceCommand" do
   string "ForceCommand /usr/sbin/login_duo"
   action :remove
-  only_if { node['duo_unix']['conf']['login_duo_enabled'] == false } 
+  only_if { node['duo_unix']['conf']['login_duo_enabled'] == false }
 end
 
 #adds PermitTunnel setting to sshd_config

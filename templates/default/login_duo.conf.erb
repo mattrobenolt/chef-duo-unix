@@ -1,9 +1,18 @@
 [duo]
-ikey= <%=node['duo_unix']['conf']['integration_key']%>
-skey= <%=node['duo_unix']['conf']['secret_key']%>
-host= <%=node['duo_unix']['conf']['api_hostname']%>
-pushinfo= <%=node['duo_unix']['conf']['pushinfo']%>
+ikey = <%= node['duo_unix']['conf']['integration_key'] %>
+skey = <%= node['duo_unix']['conf']['secret_key'] %>
+host = <%= node['duo_unix']['conf']['api_hostname'] %>
+pushinfo = <%= node['duo_unix']['conf']['pushinfo'] %>
+failmode = <%= node['duo_unix']['conf']['failmode'] %>
+autopush = <%= node['duo_unix']['conf']['autopush'] %>
+motd = <%= node['duo_unix']['conf']['motd'] %>
+prompts = <%= node['duo_unix']['conf']['prompts'] %>
+accept_env_factor = <%= node['duo_unix']['conf']['accept_env_factor'] %>
+fallback_local_ip = <%= node['duo_unix']['conf']['fallback_local_ip'] %>
+https_timeout = <%= node['duo_unix']['conf']['https_timeout'] %>
 <% if node['duo_unix']['conf']['group'] != '' %>
-group= <%=node['duo_unix']['conf']['group']%>
+group = <%= node['duo_unix']['conf']['group'] %>
 <% end %>
-failmode= <%=node['duo_unix']['conf']['failmode']%>
+<% if node['duo_unix']['conf']['https_proxy'] != '' %>
+https_proxy = <%= node['duo_unix']['conf']['https_proxy'] %>
+<% end %>
