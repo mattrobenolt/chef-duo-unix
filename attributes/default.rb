@@ -1,6 +1,6 @@
 default['duo_unix']['url'] = 'https://dl.duosecurity.com/duo_unix-'
-default['duo_unix']['version']  = '1.9'
-default['duo_unix']['checksum'] = '8b602272bdd8f23d050fb6e8e60b4b23a48428c001d5bc2bea1ac56e9c2c2d6a74d41bc1ba26209c12d56238a9048b53ab6a6f2b5b854a79ed0219b9c3ecbd1e'
+default['duo_unix']['version']  = '1.9.15'
+default['duo_unix']['checksum'] = '9d96e5afea2407195af9be210c774b5b53fe97d0499a4e224b43246293df6aba7a6e6ae6bcc1041bba1cbc498511cb805d78febc45b6f3cf1894bb986233de5f'
 default['duo_unix']['configure_options'] = %W{--prefix=/usr}
 default['duo_unix']['conf']['integration_key'] = ''
 default['duo_unix']['conf']['secret_key'] = ''
